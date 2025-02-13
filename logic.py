@@ -5,8 +5,6 @@
 By BlockMaster
 """
 import difflib
-from math import sumprod
-
 import db_manager
 
 
