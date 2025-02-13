@@ -8,7 +8,9 @@ You can get into the bot using the username @CO2_calc_bot.
 
 ## Usage
 
-Будет скоро...
+/calculate - start calculation
+
+/normal - get the average pollution per person in the country
 
 ## License
 
