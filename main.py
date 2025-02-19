@@ -16,6 +16,7 @@ status = ""
 data = []
 db = DB()
 
+
 @bot.message_handler(commands=["calculate"])
 def calculate_(msg):
     global status
@@ -43,7 +44,7 @@ def input_(msg):
             status = "social_transport"
             bot.send_message(msg.chat.id, "Напишите количество километров, которые вы проехали на общественном транспорте")
             return
-
+        
         case "social_transport":
             try:
                 data.append(int(msg.text))
@@ -53,7 +54,7 @@ def input_(msg):
             status = "food_type"
             bot.send_message(msg.chat.id, "Напишите тип вашей диеты. Варианты - Вегетарианская/Обычная")
             return
-
+        
         case "food_type":
             if not msg.text in ["Вегетарианская", "Обычная"]:
                 bot.send_message(msg.chat.id, "Такого варианта не существует! Напишите тип вашей диеты. Варианты - Вегетарианская/Обычная")
@@ -65,7 +66,7 @@ def input_(msg):
             status = "at_home"
             bot.send_message(msg.chat.id, "Напишите количество приёмов пищи дома")
             return
-
+        
         case "at_home":
             try:
                 data.append(int(msg.text))
@@ -75,7 +76,7 @@ def input_(msg):
             status = "at_restaurant"
             bot.send_message(msg.chat.id, "Напишите количество приёмов пищи в кафе/ресторане")
             return
-
+        
         case "at_restaurant":
             try:
                 data.append(int(msg.text))
@@ -85,7 +86,7 @@ def input_(msg):
             status = "kwats"
             bot.send_message(msg.chat.id, "Напишите количество киловаттов, которые вы израсходовали")
             return
-
+        
         case "kwats":
             try:
                 data.append(int(msg.text))
@@ -108,7 +109,7 @@ def input_(msg):
 Пройти тест заново - /calculate
 """)
             return
-
+        
         case "country":
             inp = msg.text
             try:
