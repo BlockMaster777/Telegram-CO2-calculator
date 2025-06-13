@@ -14,4 +14,4 @@ You can get into the bot using the username @CO2_calc_bot.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+GPL 3.0
